@@ -1,0 +1,32 @@
+{
+  "@odata.context": "https://searchamirblock.search.windows.net/$metadata#skillsets/$entity",
+  "@odata.etag": "\"0x8DA55678B2CD93A\"",
+  "name": "azuretable-skillset-des",
+  "description": "Skillset created from the portal. skillsetName: azuretable-skillset-des; contentField: description; enrichmentGranularity: document; knowledgeStoreStorageAccount: ;",
+  "skills": [
+    {
+      "@odata.type": "#Microsoft.Skills.Text.KeyPhraseExtractionSkill",
+      "name": "#1",
+      "description": null,
+      "context": "/document/description",
+      "defaultLanguageCode": "en",
+      "maxKeyPhraseCount": null,
+      "modelVersion": null,
+      "inputs": [
+        {
+          "name": "text",
+          "source": "/document/description"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "keyPhrases",
+          "targetName": "keyphrases"
+        }
+      ]
+    }
+  ],
+  "cognitiveServices": null,
+  "knowledgeStore": null,
+  "encryptionKey": null
+}

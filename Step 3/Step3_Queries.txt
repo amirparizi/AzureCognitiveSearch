@@ -1,0 +1,408 @@
+1.search=* & $filter = instructor eq 'Claudia Blackman'
+
+{
+  "@odata.context": "https://searchamirblock.search.windows.net/indexes('azuretable-index-des')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 1,
+      "Key": "company-moodle578a3319-aa7c-4d2f-b6a4-39e9638b0a85",
+      "description": "For administrators, this course will teach you how our CI/CD pipelines work from an operations perspective",
+      "duration": 5,
+      "instructor": "Claudia Blackman",
+      "level": "intermediate",
+      "product": "jenkins",
+      "rating_average": 4.9,
+      "rating_count": 56,
+      "role": "admin",
+      "source": "Company Moodle",
+      "title": "DevOps for Ops",
+      "url": "https://www.example.com/course5",
+      "keyphrases": [
+        "CI/CD pipelines",
+        "operations perspective",
+        "administrators",
+        "course"
+      ],
+      "instructor_data": null,
+      "entities": "[{\"name\":\"Claudia Blackman\",\"description\":\"Claudia is our senior DevOps engineer. She is charged with overseeing our DevOps operations and has been with the company for 2 years. Claudia enjoys downhill skiing and is a member of the local Search & Rescue Team.\",\"matches\":[{\"text\":\"claudia blackman\",\"offset\":0,\"length\":16,\"matchDistance\":0.0}]}]"
+    },
+    {
+      "@search.score": 1,
+      "Key": "company-moodle9700e1dc-b293-4306-9e1b-0d345863db54",
+      "description": "This course will teach you the specific ways our company uses Git. You will learn details for comments, branching, pull requests, and other procsses",
+      "duration": 3,
+      "instructor": "Claudia Blackman",
+      "level": "beginner",
+      "product": "git",
+      "rating_average": 4.5,
+      "rating_count": 125,
+      "role": "developer",
+      "source": "Company Moodle",
+      "title": "Git Workflow ",
+      "url": "https://www.example.com/course3",
+      "keyphrases": [
+        "specific ways",
+        "other procsses",
+        "course",
+        "company",
+        "Git",
+        "details",
+        "comments",
+        "requests"
+      ],
+      "instructor_data": null,
+      "entities": "[{\"name\":\"Claudia Blackman\",\"description\":\"Claudia is our senior DevOps engineer. She is charged with overseeing our DevOps operations and has been with the company for 2 years. Claudia enjoys downhill skiing and is a member of the local Search & Rescue Team.\",\"matches\":[{\"text\":\"claudia blackman\",\"offset\":0,\"length\":16,\"matchDistance\":0.0}]}]"
+    },
+    {
+      "@search.score": 1,
+      "Key": "company-moodleb51ede14-025f-49ad-9e9e-44ad284eedda",
+      "description": "For developers, this course will teach you how to hook your dev work into our existing CI/CD pipelines.",
+      "duration": 3,
+      "instructor": "Claudia Blackman",
+      "level": "intermediate",
+      "product": "jenkins",
+      "rating_average": 3.8,
+      "rating_count": 101,
+      "role": "developer",
+      "source": "Company Moodle",
+      "title": "DevOps for Dev",
+      "url": "https://www.example.com/course4",
+      "keyphrases": [
+        "existing CI/CD pipelines",
+        "dev work",
+        "developers",
+        "course"
+      ],
+      "instructor_data": null,
+      "entities": "[{\"name\":\"Claudia Blackman\",\"description\":\"Claudia is our senior DevOps engineer. She is charged with overseeing our DevOps operations and has been with the company for 2 years. Claudia enjoys downhill skiing and is a member of the local Search & Rescue Team.\",\"matches\":[{\"text\":\"claudia blackman\",\"offset\":0,\"length\":16,\"matchDistance\":0.0}]}]"
+    }
+  ]
+}
+
+2. search=* & $filter = instructor eq 'Claudia Blackman' & $select = level,description
+
+{
+  "@odata.context": "https://searchamirblock.search.windows.net/indexes('azuretable-index-des')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 1,
+      "description": "For administrators, this course will teach you how our CI/CD pipelines work from an operations perspective",
+      "level": "intermediate"
+    },
+    {
+      "@search.score": 1,
+      "description": "This course will teach you the specific ways our company uses Git. You will learn details for comments, branching, pull requests, and other procsses",
+      "level": "beginner"
+    },
+    {
+      "@search.score": 1,
+      "description": "For developers, this course will teach you how to hook your dev work into our existing CI/CD pipelines.",
+      "level": "intermediate"
+    }
+  ]
+}
+
+3. search=Learn & $orderby= rating_count
+
+{
+  "@odata.context": "https://searchamirblock.search.windows.net/indexes('azuretable-index-des')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 1.7825406,
+      "Key": "ms-learn015c2947-8e4e-44f5-b342-0564f0ee2fbf",
+      "description": "Learn to manage LUIS apps through versioning, key management, handling data, and improving predictions.",
+      "duration": 24,
+      "instructor": "",
+      "level": "intermediate",
+      "product": "azure",
+      "rating_average": 4.77,
+      "rating_count": 106,
+      "role": "developer",
+      "source": "MS Learn",
+      "title": "Manage your Language Understanding Intelligent Service (LUIS) Apps",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/manage-language-understanding-intelligent-service-apps/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "LUIS apps",
+        "key management",
+        "versioning",
+        "data",
+        "predictions"
+      ],
+      "instructor_data": null,
+      "entities": "[]"
+    },
+    {
+      "@search.score": 1.7825406,
+      "Key": "ms-learn01731c10-20bb-41e7-ba21-8528669dcdc3",
+      "description": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps",
+      "duration": 18,
+      "instructor": "",
+      "level": "advanced",
+      "product": "azure",
+      "rating_average": 4.75,
+      "rating_count": 137,
+      "role": "ai-engineer",
+      "source": "MS Learn",
+      "title": "Use containers for your Language Understanding Intelligent Service (LUIS) Apps",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/use-containers-language-understanding-intelligent-service-apps/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "Language Understanding Intelligent Service",
+        "LUIS) Apps",
+        "containers"
+      ],
+      "instructor_data": null,
+      "entities": "[]"
+    },
+    {
+      "@search.score": 1.7825406,
+      "Key": "ms-learn0197c8c6-dfc4-450b-9fa7-3f610977cc79",
+      "description": "Learn about AI Builder Text recognition and how to use it with other Power Platform products.",
+      "duration": 55,
+      "instructor": "",
+      "level": "beginner",
+      "product": "ai-builder",
+      "rating_average": 4.61,
+      "rating_count": 197,
+      "role": "business-user",
+      "source": "MS Learn",
+      "title": "Get started with AI Builder Text recognition",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/get-started-with-ai-builder-text-recognition/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "AI Builder Text recognition",
+        "other Power Platform products"
+      ],
+      "instructor_data": null,
+      "entities": "[]"
+    },
+    {
+      "@search.score": 1.7825406,
+      "Key": "ms-learn002f4436-7360-4daa-a21d-f9dcd3518589",
+      "description": "Enable business users with key AI use cases",
+      "duration": 34,
+      "instructor": "",
+      "level": "beginner",
+      "product": "power-platform",
+      "rating_average": 4.75,
+      "rating_count": 758,
+      "role": "functional-consultant",
+      "source": "MS Learn",
+      "title": "Enable business users with key AI use cases",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/enable-business-users-with-key-ai-uses-cases/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "key AI use cases",
+        "business users"
+      ],
+      "instructor_data": null,
+      "entities": "[]"
+    },
+    {
+      "@search.score": 1.7825406,
+      "Key": "ms-learn00baaa75-89fe-4f86-805f-f08336e6af48",
+      "description": "Explore the strategic components, use cases, and special factors of an enterprise AI strategy that creates real business value, with INSEAD and Microsoft.",
+      "duration": 70,
+      "instructor": "",
+      "level": "intermediate",
+      "product": "m365",
+      "rating_average": 4.71,
+      "rating_count": 2779,
+      "role": "business-user",
+      "source": "MS Learn",
+      "title": "Define an AI strategy to create business value",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/ai-strategy-to-create-business-value/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "enterprise AI strategy",
+        "real business value",
+        "strategic components",
+        "special factors",
+        "cases",
+        "INSEAD",
+        "Microsoft"
+      ],
+      "instructor_data": null,
+      "entities": "[]"
+    },
+    {
+      "@search.score": 1.7825406,
+      "Key": "ms-learn000a0d57-a0fe-4386-829c-99074d1b3b9b",
+      "description": "Find out about automated testing that proves your code to be maintainable, understandable, and functioning without repetitive manual testing.",
+      "duration": 82,
+      "instructor": "",
+      "level": "beginner",
+      "product": "azure-devops",
+      "rating_average": 4.73,
+      "rating_count": 3301,
+      "role": "solution-architect",
+      "source": "MS Learn",
+      "title": "Run quality tests in your build pipeline by using Azure Pipelines",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/run-quality-tests-build-pipeline/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "repetitive manual testing",
+        "automated testing",
+        "code"
+      ],
+      "instructor_data": null,
+      "entities": "[]"
+    }
+  ]
+}
+
+4. search=* & $select=doi,publicationDate
+
+    {
+      "@search.score": 1,
+      "doi": "10.1007/s40685-020-00134-w",
+      "publicationDate": "2020-11-01"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1186/s13640-018-0373-8",
+      "publicationDate": "2018-11-27"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1186/s13640-020-00545-z",
+      "publicationDate": "2021-01-14"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1186/s13673-018-0135-8",
+      "publicationDate": "2018-05-09"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1186/s13673-019-0177-6",
+      "publicationDate": "2019-05-01"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1186/s40064-015-1515-4",
+      "publicationDate": "2015-12-01"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1186/s40294-016-0016-9",
+      "publicationDate": "2016-02-03"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1186/s40493-015-0019-z",
+      "publicationDate": "2015-09-07"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1186/s40537-018-0141-8",
+      "publicationDate": "2018-09-22"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1186/s40537-019-0184-5",
+      "publicationDate": "2019-02-28"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1186/s40537-019-0210-7",
+      "publicationDate": "2019-06-06"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1186/s40537-019-0258-4",
+      "publicationDate": "2019-10-31"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1186/s40537-020-00292-y",
+      "publicationDate": "2020-02-28"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1007/s40708-015-0017-z",
+      "publicationDate": "2015-09-01"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1186/s40708-020-00109-x",
+      "publicationDate": "2020-09-21"
+    },
+    {
+      "@search.score": 1,
+      "doi": "10.1007/s41109-020-00330-x",
+      "publicationDate": "2020-11-16"
+    }
+  ]
+}
+
+5. search=$filter= publicationName eq 'Business Research' 
+
+{
+  "@odata.context": "https://searchamirblock.search.windows.net/indexes('azuretable-index-des')/$metadata#docs(*)",
+  "value": [
+    {
+      "@search.score": 5.5889907,
+      "Key": "ms-learn00baaa75-89fe-4f86-805f-f08336e6af48",
+      "description": "Explore the strategic components, use cases, and special factors of an enterprise AI strategy that creates real business value, with INSEAD and Microsoft.",
+      "duration": 70,
+      "instructor": "",
+      "level": "intermediate",
+      "product": "m365",
+      "rating_average": 4.71,
+      "rating_count": 2779,
+      "role": "business-user",
+      "source": "MS Learn",
+      "title": "Define an AI strategy to create business value",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/ai-strategy-to-create-business-value/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "enterprise AI strategy",
+        "real business value",
+        "strategic components",
+        "special factors",
+        "cases",
+        "INSEAD",
+        "Microsoft"
+      ],
+      "instructor_data": null,
+      "entities": "[]"
+    },
+    {
+      "@search.score": 4.819221,
+      "Key": "ms-learn002f4436-7360-4daa-a21d-f9dcd3518589",
+      "description": "Enable business users with key AI use cases",
+      "duration": 34,
+      "instructor": "",
+      "level": "beginner",
+      "product": "power-platform",
+      "rating_average": 4.75,
+      "rating_count": 758,
+      "role": "functional-consultant",
+      "source": "MS Learn",
+      "title": "Enable business users with key AI use cases",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/enable-business-users-with-key-ai-uses-cases/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "key AI use cases",
+        "business users"
+      ],
+      "instructor_data": null,
+      "entities": "[]"
+    },
+    {
+      "@search.score": 1.4895996,
+      "Key": "ms-learn0197c8c6-dfc4-450b-9fa7-3f610977cc79",
+      "description": "Learn about AI Builder Text recognition and how to use it with other Power Platform products.",
+      "duration": 55,
+      "instructor": "",
+      "level": "beginner",
+      "product": "ai-builder",
+      "rating_average": 4.61,
+      "rating_count": 197,
+      "role": "business-user",
+      "source": "MS Learn",
+      "title": "Get started with AI Builder Text recognition",
+      "url": "https://docs.microsoft.com/en-us/learn/modules/get-started-with-ai-builder-text-recognition/?WT.mc_id=api_CatalogApi",
+      "keyphrases": [
+        "AI Builder Text recognition",
+        "other Power Platform products"
+      ],
+      "instructor_data": null,
+      "entities": "[]"
+    }
+  ]
+}

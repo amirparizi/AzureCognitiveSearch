@@ -1,0 +1,31 @@
+{
+    "@odata.context": "https://searchamirblock.search.windows.net/$metadata#indexers/$entity",
+    "@odata.etag": "\"0x8DA55B9BE7B41DD\"",
+    "name": "azuretable-indexer-d",
+    "description": "",
+    "dataSourceName": "courses",
+    "skillsetName": "azuretable-skillset-des",
+    "targetIndexName": "azuretable-index-des",
+    "disabled": null,
+    "schedule": null,
+    "parameters": {
+      "batchSize": null,
+      "maxFailedItems": 0,
+      "maxFailedItemsPerBatch": 0,
+      "base64EncodeKeys": false,
+      "configuration": {}
+    },
+    "fieldMappings": [],
+    "outputFieldMappings": [
+      {
+        "sourceFieldName": "/document/description/keyphrases",
+        "targetFieldName": "keyphrases"
+      },
+      {
+        "sourceFieldName": "/document/instructor/entities",
+        "targetFieldName": "entities"
+      }
+    ],
+    "cache": null,
+    "encryptionKey": null
+  }
